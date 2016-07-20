@@ -1,0 +1,26 @@
+151A project 1 description and what to do
+ 
+obj - combine BISECTION and NEWTONS method - solving eqn in one variable
+	1) guaranteed convergence of Bisection method
+	2) fast convergence of Newton's method
+
+motivation -
+	solve f(x) = 0. 
+	- f is differentiable on [a,b]
+		- if f(a) and f(b) have opposite signs, then Bisection method converges
+		linearly to p, a zero of f
+		- if the initial guess for p, which is xo, is 'sufficiently close' to 
+		p, then Newton's method converges.
+			- if it converges && f'(p) =/= 0, it converges quadratically,
+			much faster than bisection method
+	//Sometimes, trial and error is needed for a good initial guess. 
+	- GOAL: make hybrid approach to automate choice of initial guess for newtons
+
+proposed method: psuedocode already there - algorithm 1, requires two functions:
+	1) function [A, B, p] = BISECTION(f, a, b, TOL, imax)
+		- takes function f, left and right end points, tolerance, max num of
+		iterations; outputs new end points and solution
+	2) function [p, flag] NEWTON(f, df, xo, TOL, imax)
+		- takes f, f', initial guess, tolerance, max num iterations; output
+		solution and flag determining if converged (0 = diverge, 1 = convg)
+		

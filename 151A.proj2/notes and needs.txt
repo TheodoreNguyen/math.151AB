@@ -1,0 +1,23 @@
+function 1: construction of cubic splines from 2.2. Provide options to choose NBC and CBC
+function 2-n: solve tracking problem
+pdf: 
+-user guide describing all routines/applications, what they do, and meaning of ea var
+-solns data in data.mat. load data. ip are the data pts. test code - plot path of vehicle
+-experiments: calculate velocity at each pt in ^^ using cubic splines. This is uo, . un
+	Do the but now with the 3-pt midpoint method. This is vo, .. vn
+		(the velocity of a vehicle is a 2D vector)
+	plot velocity field (vector field) using quiver.
+		decide which one is more accruate
+
+
+summary: what you need:
+- function 1 construct cubic splines	
+- function 2 solve tracking problem
+	(he wants coefficients of the splines as the outputs for both)
+- pdf - write all routines and how to use them and stuff
+	- plot the path of the vehicle				DONE: xi_xii_vs_yi_yii.png
+	- calculate velocity at to, .. tn using cubic splines 	DONE: uo, .. un
+					- using 3pt midpoint 	DONE: vo, .. vn
+	- plot velocity field u and v in same plot via quiver	DONE: vectorfield_cubicTHEN_midpt.png
+	- answer: which one is more accurate probably?	DONE: ux, cuz higher order error term
+
